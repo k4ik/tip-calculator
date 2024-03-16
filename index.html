@@ -23,13 +23,16 @@
             <form class="px-11 py-6 flex flex-col gap-3">
                 <fieldset class="flex flex-col gap-2">
                     <label>Price:</label>
-                    <input type="text" class="w-full">
+                    <input type="text" class="w-full px-2 outline-none font-xs" id="price" autocomplete="off">
                 </fieldset>
                 <fieldset class="flex flex-col gap-2">
                     <label>Tip %</label>
-                    <input type="text" class="w-full">
+                    <input type="text" class="w-full px-2 outline-none font-xs" id="percentage" autocomplete="off">
                 </fieldset>
-                <button class="bg-brown w-full mb-4 mt-8">Calculate</button>
+                <button class="bg-brown w-full mb-4 mt-8" onclick="submitData(event)">Calculate</button>
+                <p id="tipResult"></p>
+                <p id="totalResult"></p>
+
             </form>
         </div>
     </section>
@@ -45,5 +48,7 @@
             <p class="text-justify mb-6">The tip is usually calculated as a percentage of the total bill, typically between 10% and 20%, depending on the quality of service and local norms. Some establishments may include a suggested tip amount on the bill, but customers are free to adjust this amount according to their experience.</p>
         </section>
     </main>
+
+    <script src="./index.js"></script>
 </body>
 </html>
