@@ -6,7 +6,44 @@
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="src/assets/styles/output.css">
 </head>
-<body>
-    
+<body class="text-text">
+    <!--HEADER -->
+    <header class="flex justify-end bg-brown">
+        <button class="p-2 border-l border-text">EN</button>
+    </header>
+    <!-- SECTION -->
+    <section class="bg-cover bg-center h-screen flex justify-center items-center" style="background-image: url('./src/assets/images/background.jpg');">
+        <!-- CONTAINER -->
+        <div class="bg-gradient-to-b from-bg1 to-bg2 max-w-lg flex flex-col w-full">
+            <!--HEADER FORM-->
+            <div class="bg-brown py-4">
+                <h1 class="uppercase text-center font-bold text-3xl">tip calculator</h1>
+            </div>
+            <!--FORM-->
+            <form class="px-11 py-6 flex flex-col gap-3">
+                <fieldset class="flex flex-col gap-2">
+                    <label>Price:</label>
+                    <input type="text" class="w-full">
+                </fieldset>
+                <fieldset class="flex flex-col gap-2">
+                    <label>Tip %</label>
+                    <input type="text" class="w-full">
+                </fieldset>
+                <button class="bg-brown w-full mb-4 mt-8">Calculate</button>
+            </form>
+        </div>
+    </section>
+    <!--MAIN SECTION-->
+    <main>
+        <!--CONTENT SECTION-->
+        <section class="p-12">
+            <h2 class="text-lg font-bold">What Are Tips and Why Are They Charged?</h2>
+            <p class="text-justify mb-6">Tips, also known as gratuities, are additional amounts paid by customers in establishments such as restaurants, bars, hotels, and other hospitality services. This practice is common in many countries around the world and aims to recognize and reward the good service provided by professionals who serve customers.</p>
+            <h2 class="text-lg font-bold">Are Tips Mandatory?</h2>
+            <p class="text-justify mb-6">Tips are not mandatory by law in most places, but they are considered a common practice and encouraged in many establishments. In some cases, especially in events or large groups, the tip may be automatically included in the bill, making it mandatory.</p>
+            <h2 class="text-lg font-bold">How to Calculate the Tip?</h2>
+            <p class="text-justify mb-6">The tip is usually calculated as a percentage of the total bill, typically between 10% and 20%, depending on the quality of service and local norms. Some establishments may include a suggested tip amount on the bill, but customers are free to adjust this amount according to their experience.</p>
+        </section>
+    </main>
 </body>
 </html>
