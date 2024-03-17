@@ -10,7 +10,7 @@ function getTip(e) {
     }
 
     if(isNaN(priceInput) || isNaN(percentageInput)){
-        alert("Insira valores válidos!")
+        alert("Enter valid values!")
         return;
     }
 
