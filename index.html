@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="src/assets/styles/output.css">
+    <link rel="shortcut icon" href="src/assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body class="text-text">
     <!--HEADER -->
     <header class="flex justify-end bg-brown">
-        <button class="p-2 border-l border-text">EN</button>
+        <button class="p-2 border-l border-text hover:bg-yellow-800 transition">EN</button>
     </header>
     <!-- SECTION -->
     <section class="bg-cover bg-center h-screen flex justify-center items-center" style="background-image: url('./src/assets/images/background.jpg');">
@@ -22,14 +23,14 @@
             <!--FORM-->
             <form class="px-11 py-6 flex flex-col gap-3">
                 <fieldset class="flex flex-col gap-2">
-                    <label>Price:</label>
-                    <input type="text" class="w-full px-2 outline-none font-xs" id="price" autocomplete="off">
+                    <label for="price">Price:</label>
+                    <input type="text" class="w-full px-2 outline-none font-xs p-1" id="price" autocomplete="off" name="price">
                 </fieldset>
                 <fieldset class="flex flex-col gap-2">
-                    <label>Tip %</label>
-                    <input type="text" class="w-full px-2 outline-none font-xs" id="percentage" autocomplete="off">
+                    <label for="percentage">Tip %</label>
+                    <input type="text" class="w-full px-2 outline-none font-xs p-1" id="percentage" autocomplete="off" name="percentage">
                 </fieldset>
-                <button class="bg-brown w-full mb-4 mt-8" onclick="getTip(event)">Calculate</button>
+                <button class="bg-brown p-1 w-full mb-4 mt-8 hover:bg-yellow-800 transition" onclick="getTip(event)">Calculate</button>
                 <p id="tipResult"></p>
                 <p id="totalResult"></p>
 
