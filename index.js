@@ -1,24 +1,35 @@
-function submitData(e) {
+function getTip(e) {
     e.preventDefault();
     
-    let priceInput = parseInt(document.getElementById("price").value);
-    let percentageInput =  parseInt(document.getElementById("percentage").value);
+    let priceInput = document.getElementById("price").value;
+    let percentageInput =  document.getElementById("percentage").value;
 
-    let percentageInDecimal = percentageInput / 100;
+    if(priceInput == "" || percentageInput == "") {
+        alert("Fill in the fields!");
+        return;
+    }
 
-    let tip = calculateTip(priceInput, percentageInDecimal);
-    let total = calculateTotalAmounth(priceInput, tip)
+    if(isNaN(priceInput) || isNaN(percentageInput)){
+        alert("Insira valores válidos!")
+        return;
+    }
+
+    let price = parseFloat(priceInput);
+    let percentageInDecimal = parseFloat(percentageInput) / 100;
+
+    let tip = calculateTip(price, percentageInDecimal);
+    let total = calculateTotalAmount(price, tip)
 
     let tipP = document.getElementById("tipResult");
     let totalP = document.getElementById("totalResult");
-    tipP.innerHTML = `Tip: ${tip}`;
-    totalP.innerHTML = `Total: ${total}`;
+    tipP.innerHTML = `Tip: ${tip.toFixed(2)}`;
+    totalP.innerHTML = `Total Amount: ${total.toFixed(2)}`;
 }
 
 function calculateTip(price, percentage) {
     return price * percentage
 }
 
-function calculateTotalAmounth(price, tip) {
+function calculateTotalAmount(price, tip) {
     return price + tip
 }
